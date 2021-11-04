@@ -125,7 +125,12 @@ function App() {
   }
 
   function showProducts(input) {
-    setProducts(products.filter((product) => product.name.includes(input)));
+    setProducts(
+      products.filter(
+        (product) =>
+          product.name.includes(input) || product.category.includes(input)
+      )
+    );
   }
 
   function ClearCart(input) {
